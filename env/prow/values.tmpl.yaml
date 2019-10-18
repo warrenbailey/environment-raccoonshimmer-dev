@@ -1,0 +1,25 @@
+{{- if eq .Requirements.webhook "prow" }}
+enabled: true
+{{- else }}
+enabled: false
+{{- end }}
+
+hmacToken: "{{ .Parameters.prow.hmacToken }}"
+oauthToken: "{{ .Parameters.pipelineUser.token }}"
+user: "{{ .Parameters.pipelineUser.username }}"
+
+buildnum:
+  enabled: false
+pipelinerunner:
+  enabled: "true"
+  args:
+  - controller
+  - pipelinerunner
+  - --use-meta-pipeline=false
+  image:
+    repository: gcr.io/jenkinsxio/builder-maven
+    tag: 0.1.723
+tillerNamespace: ""
+
+sinker:
+  replicaCount: 0
