@@ -1,0 +1,14 @@
+adminUser:
+  password: vault:raccoonshimmer/adminUser:password
+  username: admin
+dashboardAuthID: vault:raccoonshimmer:dashboardAuthID
+dashboardAuthOrg: arcalos-dashboard
+dashboardAuthSecret: vault:raccoonshimmer:dashboardAuthSecret
+dashboardGrpchost: dex.jx
+enableDocker: false
+pipelineUser:
+  email: arcalos-admin@googlegroups.com
+  token: vault:raccoonshimmer/pipelineUser:token
+  username: arcalos-bot
+prow:
+  hmacToken: vault:raccoonshimmer/prow:hmacToken
