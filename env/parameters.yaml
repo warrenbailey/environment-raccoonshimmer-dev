@@ -6,13 +6,13 @@ dashboardAuthOrg: arcalos-dashboard
 dashboardAuthSecret: vault:raccoonshimmer:dashboardAuthSecret
 dashboardGrpchost: dex.jx
 enableDocker: false
+parentDNSZone: jxaas-run-parent
+parentDomain: jxaas.run
+parentProject: dev-arcalos-domain-name
 pipelineUser:
   email: arcalos-admin@googlegroups.com
   token: vault:raccoonshimmer/pipelineUser:token
   username: arcalos-bot
 prow:
   hmacToken: vault:raccoonshimmer/prow:hmacToken
-parentDNSZone: jxaas-run-parent
-parentDomain: jxaas.run
-parentProject: dev-arcalos-domain-name
 tenantServiceDBInstance: dev-tenant-service-db:us-east1:dev-jx-tenant-db=tcp:5432
