@@ -168,10 +168,26 @@ ui:
 {{- end }}
 {{- end }}
     domain: "{{ .Requirements.ingress.domain }}"
-    oidcIssuerUrl: "https://dex-jx.{{ .Requirements.ingress.domain }}"
+    oidcIssuerUrl: "https://dex{{ .Requirements.ingress.namespaceSubDomain }}{{ .Requirements.ingress.domain }}"
 
 {{- if .Requirements.autoUpdate }}
 autoUpdate:
   schedule: {{ .Requirements.autoUpdate.schedule | quote }}
   enabled: {{ .Requirements.autoUpdate.enabled }}
 {{- end }}
+
+arcalos:
+  adminUsername: vault:arcalos:admin-username
+  dashboardAuthId: vault:arcalos:dashboard-auth-id
+  dashboardAuthSecret: vault:arcalos:dashboard-auth-secret # pragma: allowlist secret
+  domainIssuerPassword: vault:arcalos:domain-issuer-password # pragma: allowlist secret
+  domainIssuerUsername: vault:arcalos:domain-issuer-username
+  domainIssuerUrl: "https://jx-tenant-service{{ .Requirements.ingress.namespaceSubDomain }}{{ .Requirements.ingress.domain }}"
+  pipelineGithubUser: vault:arcalos:pipeline-github-user
+  pipelineGithubToken: vault:arcalos:pipeline-github-token
+  pipelineGithubEmail: vault:arcalos:pipeline-github-email
+  gitOwner: vault:arcalos:git-owner
+  prowHMACToken: vault:arcalos:prow-hmac-token
+  ciSA: vault:arcalos-sa:json
+
+basicAuth: "{{ .Parameters.adminUser.username }}:{SHA}{{ .Parameters.adminUser.password | hashPassword }}"

@@ -12,3 +12,7 @@ pipelineUser:
   username: arcalos-bot
 prow:
   hmacToken: vault:raccoonshimmer/prow:hmacToken
+parentDNSZone: jxaas-run-parent
+parentDomain: jxaas.run
+parentProject: dev-arcalos-domain-name
+tenantServiceDBInstance: dev-tenant-service-db:us-east1:dev-jx-tenant-db=tcp:5432

@@ -1,0 +1,19 @@
+dependencies:
+- host: github.com
+  owner: cloudbees
+  repo: jx-tenant-service
+  url: https://github.com/cloudbees/jx-tenant-service
+  version: 0.0.69
+  versionURL: https://github.com/cloudbees/jx-tenant-service/releases/tag/v0.0.69
+- host: github.com
+  owner: cloudbees
+  repo: arcalosui-frontend
+  url: https://github.com/cloudbees/arcalosui-frontend
+  version: 0.0.61
+  versionURL: ""
+- host: github.com
+  owner: cloudbees
+  repo: lighthouse-githubapp
+  url: https://github.com/cloudbees/lighthouse-githubapp
+  version: 0.0.2
+  versionURL: https://github.com/cloudbees/lighthouse-githubapp/releases/tag/v0.0.2
