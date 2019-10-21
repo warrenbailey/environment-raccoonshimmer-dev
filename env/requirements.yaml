@@ -1,37 +1,40 @@
 dependencies:
-- name: jxboot-resources
+- name: arcalosui
   repository: https://storage.googleapis.com/chartmuseum.jenkins-x.io
-- alias: tekton
-  name: tekton
-  repository: https://storage.googleapis.com/chartmuseum.jenkins-x.io
-- alias: prow
-  condition: prow.enabled
-  name: prow
-  repository: https://storage.googleapis.com/chartmuseum.jenkins-x.io
-- alias: lighthouse
-  condition: lighthouse.enabled
-  name: lighthouse
-  repository: https://storage.googleapis.com/chartmuseum.jenkins-x.io
+  version: 0.0.61
 - name: jenkins-x-platform
   repository: https://storage.googleapis.com/chartmuseum.jenkins-x.io
-- name: jx-app-sso
-  repository: https://storage.googleapis.com/chartmuseum.jenkins-x.io
-  version: 0.0.19
-- name: jx-app-replicator
-  repository: https://storage.googleapis.com/chartmuseum.jenkins-x.io
-  version: 1.0.14
 - alias: jx-app-kuberhealthy
   condition: jx-app-kuberhealthy.enabled
   name: jx-app-kuberhealthy
   repository: https://storage.googleapis.com/chartmuseum.jenkins-x.io
   version: 0.0.2
+- name: jx-app-replicator
+  repository: https://storage.googleapis.com/chartmuseum.jenkins-x.io
+  version: 1.0.14
+- name: jx-app-sso
+  repository: https://storage.googleapis.com/chartmuseum.jenkins-x.io
+  version: 0.0.19
+- name: jx-tenant-service
+  repository: https://storage.googleapis.com/chartmuseum.jenkins-x.io
+  version: 0.0.89
+- name: jxboot-resources
+  repository: https://storage.googleapis.com/chartmuseum.jenkins-x.io
 - alias: ui
   name: jxui
   repository: https://charts.cloudbees.com/cjxd/cloudbees
   version: 0.0.879
-- name: jx-tenant-service
+- alias: lighthouse
+  condition: lighthouse.enabled
+  name: lighthouse
   repository: https://storage.googleapis.com/chartmuseum.jenkins-x.io
-  version: 0.0.89
-- name: arcalosui
+- name: lighthouse-githubapp
   repository: https://storage.googleapis.com/chartmuseum.jenkins-x.io
-  version: 0.0.61
+  version: 0.0.8
+- alias: prow
+  condition: prow.enabled
+  name: prow
+  repository: https://storage.googleapis.com/chartmuseum.jenkins-x.io
+- alias: tekton
+  name: tekton
+  repository: https://storage.googleapis.com/chartmuseum.jenkins-x.io
