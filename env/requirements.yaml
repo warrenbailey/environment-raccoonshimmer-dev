@@ -17,7 +17,7 @@ dependencies:
   version: 0.0.19
 - name: jx-tenant-service
   repository: https://storage.googleapis.com/chartmuseum.jenkins-x.io
-  version: 0.0.96
+  version: 0.0.97
 - name: jxboot-resources
   repository: https://storage.googleapis.com/chartmuseum.jenkins-x.io
 - alias: ui
