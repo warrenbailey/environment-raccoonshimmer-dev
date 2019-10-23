@@ -8,37 +8,43 @@ spec:
   failedJobsHistoryLimit: 1
   jobTemplate:
     spec:
-      containers:
-        - command:
-            - /bin/entrypoint.sh
-          env:
-            - name: GIT_COMMITTER_EMAIL
-              value: jenkins-x@googlegroups.com
-            - name: GIT_AUTHOR_EMAIL
-              value: jenkins-x@googlegroups.com
-            - name: GIT_AUTHOR_NAME
-              value: jenkins-x-bot
-            - name: GIT_COMMITTER_NAME
-              value: jenkins-x-bot
-            - name: JX_BATCH_MODE
-              value: "true"
-            - name: JX_LOG_FORMAT
-              value: "json"
-          image: gcr.io/jenkinsxio/builder-go:2.0.893-243
-          imagePullPolicy: IfNotPresent
-          name: boot
-          volumeMounts:
+      template:
+        metadata:
+          labels:
+            app: jenkins-x-boot-run
+            release: jx
+        spec:
+          containers:
+            - command:
+                - /bin/entrypoint.sh
+              env:
+                - name: GIT_COMMITTER_EMAIL
+                  value: jenkins-x@googlegroups.com
+                - name: GIT_AUTHOR_EMAIL
+                  value: jenkins-x@googlegroups.com
+                - name: GIT_AUTHOR_NAME
+                  value: jenkins-x-bot
+                - name: GIT_COMMITTER_NAME
+                  value: jenkins-x-bot
+                - name: JX_BATCH_MODE
+                  value: "true"
+                - name: JX_LOG_FORMAT
+                  value: "json"
+              image: gcr.io/jenkinsxio/builder-go:2.0.893-243
+              imagePullPolicy: IfNotPresent
+              name: boot
+              volumeMounts:
+                - name: upgrade-volume
+                  mountPath: /bin/entrypoint.sh
+                  readOnly: true
+                  subPath: entrypoint.sh
+          restartPolicy: Never
+          serviceAccount: "{{ .Values.cluster.name}}-jb"
+          volumes:
             - name: upgrade-volume
-              mountPath: /bin/entrypoint.sh
-              readOnly: true
-              subPath: entrypoint.sh
-      restartPolicy: Never
-      serviceAccount: "{{ .Values.cluster.name}}-jb"
-      volumes:
-        - name: upgrade-volume
-          configMap:
-            defaultMode: 0700
-            name: jx-upgrade
+              configMap:
+                defaultMode: 0700
+                name: jx-upgrade
   successfulJobsHistoryLimit: 3
   schedule: {{ .Values.arcalos.runBootSchedule | quote }}
   suspend: false
