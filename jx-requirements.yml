@@ -3,6 +3,7 @@ autoUpdate:
   schedule: 0 0 * * *
 bootConfigURL: https://github.com/cloudbees/arcalos-boot-config.git
 cluster:
+  azure: {}
   clusterName: raccoonshimmer
   environmentGitOwner: arcalos-environments
   environmentGitPublic: true
@@ -22,8 +23,7 @@ cluster:
 environments:
 - ingress:
     cloud_dns_secret_name: external-dns-gcp-sa
-    domain: aps-raccoonshimmer.jxaas.dev
-    domainIssuerURL: https://jx-tenant-service-jx.aps-lordlemon.jxaas.io
+    domain: aps-raccoonshimmer.play-jxaas.live
     externalDNS: true
     namespaceSubDomain: -jx.
     tls:
