@@ -25,6 +25,6 @@ certmanager:
 
 additionalSolvers:
 - domains:
-  - "dashboard.{{ $rootDomain }}"
-  - "dex-{{ $namespaceSubDomain }}.{{ $rootDomain }}"
+  - "dashboard{{ $rootDomain }}"
+  - "dex{{ $namespaceSubDomain }}{{ $rootDomain }}"
   projectID: dev-arcalos-domain-name
