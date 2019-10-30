@@ -1,0 +1,34 @@
+{{- $prefix := printf "%s." .Values.cluster.projectID }}
+{{- $rootDomain := trimPrefix $prefix .Values.cluster.domain }}
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: nginx
+  name: jxui
+spec:
+  rules:
+  # This domain MUST be first as the oauth proxy uses the first domain in the list to work out it's redirect url
+  #- host: dashboard.{{ $rootDomain }}
+  #  http:
+  #    paths:
+  #      - backend:
+  #          serviceName: sso-jenkins-x-jxui
+  #          servicePort: 80
+  - host: jxui{{ .Values.cluster.namespaceSubDomain }}{{ .Values.cluster.domain }}
+    http:
+      paths:
+        - backend:
+            serviceName: sso-jenkins-x-jxui
+            servicePort: 80
+{{- if .Values.cluster.tls }}
+  tls:
+  - hosts:
+      #- dashboard.{{ $rootDomain }}
+      - jxui{{ .Values.cluster.namespaceSubDomain }}{{ .Values.cluster.domain }}
+{{- if eq .Values.certmanager.production "true" }}
+    secretName: "tls-{{ .Values.cluster.domain | replace "." "-" }}-p"
+{{- else }}
+    secretName: "tls-{{ .Values.cluster.domain | replace "." "-" }}-s"
+{{- end }}
+{{- end }}

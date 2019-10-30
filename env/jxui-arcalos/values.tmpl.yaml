@@ -1,16 +1,17 @@
 {{- $prefix := printf "%s." .Requirements.cluster.project }}
 {{- $rootDomain := trimPrefix $prefix .Requirements.ingress.domain }}
-replicaCount: 2
-skipExposeService: true
-sso:
-  create: true
-  connector: google-cloudbees
-  certIssuerName: letsencrypt-prod
-  domain: "{{ $rootDomain }}"
-  oidcIssuerUrl: "https://dex{{ .Requirements.ingress.namespaceSubDomain }}{{ $rootDomain }}"
-roxApiKey: vault:rox:api-key
-service:
-  serviceAnnotations:
-    fabric8.io/expose: "false"
-    fabric8.io/exposeUrl: https://arcalosui{{ .Requirements.ingress.namespaceSubDomain }}{{ $rootDomain }}
+jxui:
+  replicaCount: 2
+  skipExposeService: true
+  sso:
+    create: true
+    connector: google-cloudbees
+    certIssuerName: letsencrypt-prod
+    domain: "{{ $rootDomain }}"
+    oidcIssuerUrl: "https://dex{{ .Requirements.ingress.namespaceSubDomain }}{{ $rootDomain }}"
+  roxApiKey: vault:rox:api-key
+  service:
+    serviceAnnotations:
+      fabric8.io/expose: "false"
+      fabric8.io/exposeUrl: https://arcalosui{{ .Requirements.ingress.namespaceSubDomain }}{{ $rootDomain }}
 
