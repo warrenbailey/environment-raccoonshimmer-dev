@@ -24,6 +24,9 @@ dependencies:
   name: jxui
   repository: https://charts.cloudbees.com/cjxd/cloudbees
   version: 0.0.879
+- name: jxui-arcalos
+  repository: https://charts.cloudbees.com/cjxd/cloudbees
+  version: 0.0.0-SNAPSHOT-PR-964-7
 - alias: lighthouse
   condition: lighthouse.enabled
   name: lighthouse
