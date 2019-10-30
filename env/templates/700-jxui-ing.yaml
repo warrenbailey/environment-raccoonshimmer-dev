@@ -13,13 +13,13 @@ spec:
   #  http:
   #    paths:
   #      - backend:
-  #          serviceName: sso-jenkins-x-arcalosui
+  #          serviceName: sso-jenkins-x-jxui
   #          servicePort: 80
   - host: jxui{{ .Values.cluster.namespaceSubDomain }}{{ .Values.cluster.domain }}
     http:
       paths:
         - backend:
-            serviceName: sso-jenkins-x-arcalosui
+            serviceName: sso-jenkins-x-jxui
             servicePort: 80
 {{- if .Values.cluster.tls }}
   tls:
