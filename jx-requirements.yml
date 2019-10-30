@@ -12,8 +12,6 @@ cluster:
   gitName: github
   gitPublic: true
   gitServer: https://github.com
-  gke:
-    projectNumber: "784477601510"
   kanikoSAName: raccoonshimmer-ko
   namespace: jx
   project: aps-raccoonshimmer
@@ -84,6 +82,6 @@ vault:
   serviceAccount: raccoonshimmer-vt
 velero: {}
 versionStream:
-  ref: v0.0.38
+  ref: v0.0.69
   url: https://github.com/cloudbees/arcalos-jenkins-x-versions.git
 webhook: prow
