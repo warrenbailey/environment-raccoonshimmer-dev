@@ -1,4 +1,6 @@
 replicaCount: 2
+imagerepo: rawlingsj80/jx-tenant-service
+imagetag: wip51
 parentDomain: {{ .Parameters.parentDomain }}
 parentProject: {{ .Parameters.parentProject}}
 parentDNSZone: {{ .Parameters.parentDNSZone}}
