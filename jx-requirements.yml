@@ -12,6 +12,8 @@ cluster:
   gitName: github
   gitPublic: true
   gitServer: https://github.com
+  gke:
+    projectNumber: "784477601510"
   kanikoSAName: raccoonshimmer-ko
   namespace: jx
   project: aps-raccoonshimmer
