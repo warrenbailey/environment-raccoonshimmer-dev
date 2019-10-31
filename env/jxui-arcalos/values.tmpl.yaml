@@ -1,6 +1,7 @@
 {{- $prefix := printf "%s." .Requirements.cluster.project }}
 {{- $rootDomain := trimPrefix $prefix .Requirements.ingress.domain }}
 jxui:
+  gcpSA: vault:jx-tenant-service-saas-sa:json
   replicaCount: 2
   skipExposeService: true
   sso:
