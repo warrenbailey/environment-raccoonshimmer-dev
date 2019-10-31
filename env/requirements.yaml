@@ -15,9 +15,6 @@ dependencies:
 - name: jx-app-sso
   repository: https://storage.googleapis.com/chartmuseum.jenkins-x.io
   version: 0.0.19
-- name: jx-repository-controller
-  repository: https://storage.googleapis.com/chartmuseum.jenkins-x.io
-  version: 0.0.3
 - name: jx-tenant-service
   repository: https://storage.googleapis.com/chartmuseum.jenkins-x.io
   version: 0.0.149
