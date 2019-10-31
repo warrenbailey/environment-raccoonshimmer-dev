@@ -23,7 +23,7 @@ spec:
             - boot
             command:
             - jx
-            image: gcr.io/jenkinsxio/builder-jx:0.1.811
+            image: gcr.io/jenkinsxio/builder-go:2.0.936-280
             imagePullPolicy: Always
             name: jenkins-x-upgrade-processor
             resources: {}
