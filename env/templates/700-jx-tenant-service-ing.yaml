@@ -15,7 +15,7 @@ spec:
       - backend:
           serviceName: jx-tenant-service
           servicePort: 80
-        path: /api/v1/(version|workspaces/token/tmp|test/workspaces).*$
+        path: /api/v1/(domain|nameservers|version|repositories|git/tokens|workspaces/token/tmp|test/workspaces).*$
 {{- if .Values.cluster.tls }}
   tls:
   - hosts:
