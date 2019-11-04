@@ -4,7 +4,7 @@ kind: CronJob
 metadata:
   name: jx-boot-upgrade
 spec:
-  concurrencyPolicy: Forbid
+  concurrencyPolicy: Allow
   failedJobsHistoryLimit: 1
   jobTemplate:
     metadata:
