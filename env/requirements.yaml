@@ -1,7 +1,4 @@
 dependencies:
-- name: arcalosui
-  repository: https://storage.googleapis.com/chartmuseum.jenkins-x.io
-  version: 0.0.71
 - name: jenkins-x-platform
   repository: https://storage.googleapis.com/chartmuseum.jenkins-x.io
 - alias: jx-app-kuberhealthy
@@ -20,10 +17,6 @@ dependencies:
   version: 0.0.163
 - name: jxboot-resources
   repository: https://storage.googleapis.com/chartmuseum.jenkins-x.io
-- alias: ui
-  name: jxui
-  repository: https://charts.cloudbees.com/cjxd/cloudbees
-  version: 0.0.879
 - name: jxui-arcalos
   repository: https://charts.cloudbees.com/cjxd/cloudbees
   version: 0.0.925
