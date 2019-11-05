@@ -1,7 +1,4 @@
 dependencies:
-- name: arcalosui
-  repository: https://storage.googleapis.com/chartmuseum.jenkins-x.io
-  version: 0.0.74
 - name: jenkins-x-platform
   repository: https://storage.googleapis.com/chartmuseum.jenkins-x.io
 - alias: jx-app-kuberhealthy
