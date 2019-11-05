@@ -17,3 +17,9 @@ dependencies:
   url: https://github.com/cloudbees/lighthouse-githubapp
   version: 0.0.5
   versionURL: https://github.com/cloudbees/lighthouse-githubapp/releases/tag/v0.0.5
+- host: github.com
+  owner: cloudbees
+  repo: jxui-frontend
+  url: https://github.com/cloudbees/jxui-frontend
+  version: 0.0.931
+  versionURL: ""
