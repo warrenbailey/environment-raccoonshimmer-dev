@@ -19,7 +19,7 @@ dependencies:
   repository: https://storage.googleapis.com/chartmuseum.jenkins-x.io
 - name: jxui-arcalos
   repository: https://charts.cloudbees.com/cjxd/cloudbees
-  version: 0.0.925
+  version: 0.0.926
 - alias: lighthouse
   condition: lighthouse.enabled
   name: lighthouse
