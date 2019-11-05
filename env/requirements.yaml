@@ -29,7 +29,7 @@ dependencies:
   repository: https://storage.googleapis.com/chartmuseum.jenkins-x.io
 - name: lighthouse-githubapp
   repository: https://storage.googleapis.com/chartmuseum.jenkins-x.io
-  version: 0.0.117
+  version: 0.0.118
 - alias: prow
   condition: prow.enabled
   name: prow
