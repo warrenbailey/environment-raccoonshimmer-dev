@@ -15,6 +15,7 @@ jxui:
     domain: "{{ $rootDomain }}"
     oidcIssuerUrl: "https://dex{{ .Requirements.ingress.namespaceSubDomain }}{{ $rootDomain }}"
   roxApiKey: vault:rox:api-key
+  segmentWriteKey: vault:segment:write-key
   service:
     serviceAnnotations:
       fabric8.io/expose: "false"
