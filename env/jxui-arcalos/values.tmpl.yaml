@@ -2,7 +2,8 @@
 {{- $rootDomain := trimPrefix $prefix .Requirements.ingress.domain }}
 jxui:
   backendImage:
-    backendTag: 0.0.0-SNAPSHOT-PR-377-8
+    backendTag: wip50
+    imageRepo: pmuir/jxui-backend
   gcpSA: vault:jx-tenant-service-saas-sa:json
   replicaCount: 2
   skipExposeService: true
