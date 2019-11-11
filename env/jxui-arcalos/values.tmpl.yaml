@@ -1,6 +1,9 @@
 {{- $prefix := printf "%s." .Requirements.cluster.project }}
 {{- $rootDomain := trimPrefix $prefix .Requirements.ingress.domain }}
 jxui:
+  backendImage:
+    backendTag: wip50
+    imageRepo: pmuir/jxui-backend
   gcpSA: vault:jx-tenant-service-saas-sa:json
   replicaCount: 2
   skipExposeService: true
