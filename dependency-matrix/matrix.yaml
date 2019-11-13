@@ -23,3 +23,9 @@ dependencies:
   url: https://github.com/cloudbees/jxui-frontend.git
   version: 0.0.938
   versionURL: ""
+- host: github.com
+  owner: warrenbailey-org
+  repo: test-golang-githubapp
+  url: https://github.com/warrenbailey-org/test-golang-githubapp.git
+  version: ""
+  versionURL: ""

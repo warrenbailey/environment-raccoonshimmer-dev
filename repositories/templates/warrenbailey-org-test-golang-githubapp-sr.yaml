@@ -1,0 +1,21 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: warrenbailey-org
+    provider: github
+    repository: test-golang-githubapp
+  name: warrenbailey-org-test-golang-githubapp
+spec:
+  description: Imported application for warrenbailey-org/test-golang-githubapp
+  httpCloneURL: https://github.com/warrenbailey-org/test-golang-githubapp.git
+  org: warrenbailey-org
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: test-golang-githubapp
+  scheduler:
+    kind: ""
+    name: ""
+  url: https://github.com/warrenbailey-org/test-golang-githubapp.git
